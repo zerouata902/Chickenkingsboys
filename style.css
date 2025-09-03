@@ -2417,15 +2417,27 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  width: 5%;           /* العرض ديال الـ border */
+  width: 100%;           /* العرض ديال الـ border */
   height: 100%;           /* سمك الخط */
   background-color: #e3a10e;
-  
+  animation: slideBorder 6s ease-in-out infinite;
   z-index: 2;
   color:black;
 }
 
-
+@keyframes slideBorder {
+  0%, 100% {
+    left: 0;
+    opacity: 0.9;
+    background: #e3a10e;
+    
+  }
+  50% {
+    left: 100%;     /* القدر لي بغيت الخط يتحرك لليمين */
+    opacity: 1;  
+    background: white;
+  }
+    }
 
 
 
